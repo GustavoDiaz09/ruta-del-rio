@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserva tu recorrido guiado por el río Magdalena y sus ciénagas.">
+  <title>Ruta del Río | Navega, descubre, recuerda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ruta del Río, inicio">
+      <span class="brand-mark" aria-hidden="true">≈</span>
+      <span>Ruta <em>del</em> Río</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+      <a href="#experiencia">La experiencia</a>
+      <a href="#recorrido">El recorrido</a>
+      <a class="nav-cta" href="#contacto">Reservar ahora <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Magangué · Bolívar · Colombia</p>
+        <h1>El río siempre<br><i>encuentra</i> el camino.</h1>
+        <p class="hero-copy">Recorre el Magdalena a bordo de una canoa, entre ciénagas, aves y relatos que solo se cuentan cuando el agua empieza a moverse.</p>
+        <a class="button button-light btn" href="#contacto">Reserva tu lugar <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-note">Una travesía para<br>volver a lo esencial <span>↓</span></div>
+      <div class="hero-stamp" aria-hidden="true"><span>RÍO</span><strong>MAGDALENA</strong><small>desde 2018</small></div>
+    </section>
+
+    <section id="experiencia" class="intro section-wrap">
+      <div class="section-kicker">01 / La experiencia</div>
+      <div class="intro-copy reveal">
+        <h2>El agua cambia<br>la forma de <i>mirar.</i></h2>
+        <p>Hay lugares que no se visitan: se atraviesan despacio. En nuestros recorridos conectas con las comunidades ribereñas, conoces la vida de las ciénagas y navegas al ritmo del paisaje.</p>
+        <a class="text-link" href="#recorrido">Conoce el recorrido <span>→</span></a>
+      </div>
+      <div class="intro-image image-frame reveal"><img src="imagen2.jpg" alt="Paisaje del río Magdalena y sus embarcaciones"></div>
+    </section>
+
+    <section id="recorrido" class="route-section">
+      <div class="section-wrap route-grid">
+        <div class="section-kicker">02 / El recorrido</div>
+        <div class="route-details reveal">
+          <h2>Tres momentos,<br>un mismo <i>río.</i></h2>
+          <div class="route-step"><span>01</span><div><h3>Salida desde el muelle</h3><p>Nos encontramos en el muelle principal de Magangué y conocemos a nuestro capitán.</p></div></div>
+          <div class="route-step"><span>02</span><div><h3>Entre ciénagas y aves</h3><p>Entramos a los brazos tranquilos del río para observar su fauna y sus historias.</p></div></div>
+          <div class="route-step"><span>03</span><div><h3>Atardecer en el Magdalena</h3><p>Cerramos la travesía compartiendo un almuerzo típico frente al paisaje.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="booking section-wrap">
+      <div class="section-kicker">03 / Inscripción</div>
+      <div class="booking-heading reveal"><h2>Reserva tu lugar<br>en la <i>canoa.</i></h2><p>Completa el formulario y te confirmamos por correo.</p></div>
+      <form id="booking-form" class="booking-form reveal">
+        <div class="form-section"><p class="form-label">Tus datos</p><div class="form-grid two"><label>Nombres *<input class="form-control" name="nombres" type="text" required></label><label>Apellidos *<input class="form-control" name="apellidos" type="text" required></label><label>Correo electrónico *<input class="form-control" name="email" type="email" required></label><label>Celular *<input class="form-control" name="celular" type="tel" required></label><label>Fecha de nacimiento *<input class="form-control" name="nacimiento" type="date" required></label><label>Ciudad de origen *<input class="form-control" name="ciudad" type="text" required></label></div></div>
+        <div class="form-section"><p class="form-label">Tu excursión</p><div class="form-grid two"><label>Fecha deseada *<input class="form-control" name="fecha" type="date" required></label><label>Hora de salida *<input class="form-control" name="hora" type="time" min="06:00" max="17:00" required><small id="schedule-help">Para esta ruta puedes salir entre las 06:00 y las 17:00.</small></label><label>Recorrido *<select class="form-select" name="recorrido" required><option value="">Selecciona una opción</option><option value="cienagas">Ruta Ciénagas · 3 horas</option><option value="magdalena">Ruta Magdalena · 5 horas</option><option value="completa">Ruta completa · 8 horas</option></select></label><label>Número de personas *<input class="form-control" name="personas" type="number" min="1" max="12" value="2" required></label><fieldset><legend>Experiencia remando *</legend><label class="radio"><input class="form-check-input" type="radio" name="nivel" value="ninguna" required> Ninguna</label><label class="radio"><input class="form-check-input" type="radio" name="nivel" value="basica"> Básica</label><label class="radio"><input class="form-check-input" type="radio" name="nivel" value="avanzada"> Avanzada</label></fieldset></div></div>
+        <div class="form-section"><p class="form-label">Servicios adicionales</p><div class="checks"><label><input class="form-check-input" type="checkbox" name="chaleco"> Alquiler de chaleco salvavidas</label><label><input class="form-check-input" type="checkbox" name="almuerzo"> Almuerzo típico</label><label><input class="form-check-input" type="checkbox" name="fotos"> Fotografías del recorrido</label></div><label class="comments">Comentarios o necesidades especiales<textarea class="form-control" name="comentarios" rows="4"></textarea></label><label class="consent"><input class="form-check-input" type="checkbox" name="consentimiento" value="1" required> Acepto las condiciones de seguridad y el tratamiento de mis datos personales. *</label></div>
+        <div class="form-actions"><button class="button button-dark btn" type="submit">Reservar mi lugar <span aria-hidden="true">↗</span></button><button class="reset-button" type="reset">Limpiar formulario</button></div><p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">≈</span><span>Ruta <em>del</em> Río</span></a><p>Muelle principal, Magangué, Bolívar.<br><a href="mailto:reservas@rutadelrio.example">Cipa Los Ingenieros</a></p></div><div class="footer-bottom"><span>© 2026 Ruta del Río</span><span>Actividad Presentada por el Cipa Los Ingenieros</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

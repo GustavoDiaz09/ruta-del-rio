@@ -1,0 +1,16 @@
+{
+	frankenphp
+	order php_server before file_server
+}
+
+:{$PORT:80} {
+	root * /app
+	encode zstd gzip
+
+	route {
+		@blocked path /api/config.php /admin/common.php /api/.htaccess /admin/.htaccess /Dockerfile /Dockerfile.vercel /Caddyfile /vercel.json /.env /.env.example /.gitignore /.htaccess /README.md /database/*
+		respond @blocked 404
+
+		php_server
+	}
+}
